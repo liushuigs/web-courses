@@ -5,7 +5,7 @@
 
 重学的目的，是为了系统地、全面地了解React相关技术。从React刚推出（2014年），到现在的React 18，站长本人几乎是一路使用React做项目产品过来的。包括本站（runjs.work），也是用React打造。但是，尽管已经用了这么多年，我对React的了解，始终是似懂非懂。经常碰到一些坑，实际上官网解答的很清楚，结果却花了很长时间google/百度，才找到答案。
 
-这就提醒我，要想再在React相关技术上有所突破，不说去理解源码吧，起码官方文档要认真地研读一遍。React官网，本身就是一个自成体系，知识点覆盖完备的教程。我相信，一次完整地研读，足以对React的理解有个质的提升。
+这就提醒我，要想再在React相关技术上有所突破，不说去理解源码吧，起码官方文档要认真地研读一遍。React官网，本身就是一个自成体系，知识点覆盖完备的教程。我相信，一次完整地研读，足以对React的理解有个质的提升。本系列基于当前最新React（18.2）进行。
 
 ### 怎么个学法？
 
@@ -17,8 +17,8 @@ runjs.work，是为程序员，特别是前端程序员量身打造的笔记工�
 * 本书是React官网的补充，所以不会考虑覆盖官网的每个基础知识点。
 * 补充的部分，则包括：示例、最佳实践、why and how、踩坑代码等。
 
-[React官网中文版](https://zh-hans.reactjs.org/docs/getting-started.html)
-[React官网英文版](https://reactjs.org/docs/getting-started.html)
+[React官网中文版](https://zh-hans.react.dev/learn)
+[React官网英文版](https://react.dev/learn)
 
 ### 如何跟学
 
