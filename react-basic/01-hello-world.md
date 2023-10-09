@@ -22,7 +22,11 @@ React 通常与其他库和工具（如 React Router 用于路由管理，Redux 
 
 ## Node.js 安装
 
-前往官网 [https://nodejs.org/zh-cn/download/](https://nodejs.org/zh-cn/download/) 下载适用于您的电脑操作系统的版本并进行安装。安装后会包含 npm。
+> Node.js是一个基于Chrome V8 JavaScript引擎构建的运行时环境，用于在服务器端执行JavaScript代码。在React开发中，通常使用Node.js作为构建工具的运行环境: React应用通常需要通过构建工具（如Webpack、Babel）将源代码转换为浏览器可以理解的代码。Node.js作为运行环境，可以帮助开发人员运行这些构建工具，以编译、打包、压缩和转换React应用的代码。
+
+前往[Node.js官网](https://nodejs.org/zh-cn/download/)下载适用于您的电脑操作系统的版本并进行安装。安装完成后会包含npm。
+
+> npm(Node Package Manager)是Node.js生态系统中的包管理工具，用于安装、管理和共享JavaScript库和工具。它是一个命令行工具，允许开发者从 npm仓库中下载并安装包，还能够管理项目依赖关系以及执行各种构建脚本和任务。
 
 ```bash
 node -v
@@ -33,18 +37,25 @@ npm -v
 
 ## VS Code 安装
 
-前往官网 [https://code.visualstudio.com/](https://code.visualstudio.com/) 下载适用于您的电脑操作系统的版本并完成安装。
+前往[VS Code官网](https://code.visualstudio.com/)下载适用于您的电脑操作系统的版本并完成安装。
+
+> Visual Studio Code，通常简称为 VS Code，是一款由 Microsoft 开发的免费、开源的集成开发环境（IDE），专门用于编写和开发各种类型的应用程序。
 
 # 使用 Create React App 创建 Hello World
 
-[Create React App](https://create-react-app.dev/docs/getting-started/) 是官方支持维护的创建 React SPA 应用程序的工具。它提供了完善的构建配置，使我们能够将焦点集中在 React 学习上。
+[Create React App（CRA）](https://create-react-app.dev/docs/getting-started/)是一个由Facebook团队开发和维护的命令行工具，用于帮助开发者快速搭建和配置React应用的基础结构。CRA旨在简化React项目的初始化和配置过程，使开发者能够专注于编写组件和功能而不必担心底层的构建工具和配置。
 
-命令行执行以下命令：
+使用CRA创建React项目需在终端执行以下命令：
+
 ```
 npx create-react-app react-basic-tutorial-code
 cd react-basic-tutorial-code
 npm start
 ```
+
+`npx create-react-app react-basic-tutorial-code`使用`npx`在npm仓库中下载Create React App模板到`react-basic-tutorial-code`文件夹中并安装对应依赖。
+
+> npx是一个随Node.js 5.2.0及以上版本一同安装的命令行工具，用于运行Node包中的可执行文件，或者是通过npm仓库中的包来执行命令。它的主要作用是在不全局安装包的情况下，临时执行包中的命令。这对于在开发过程中或执行一次性任务时非常有用。
 
 通过浏览器访问[http://localhost:3000/]()即可查看默认生成的React程序运行效果如下：
 
@@ -77,37 +88,22 @@ Create React APP生成的默认项目目录结构大致如下：
 `index.js`最终文件内容如下：
 
 ```
-import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+root.render(<App />);
 ```
 
-我们逐行进行解释
+我们逐行进行解释：
 
-- `import React from 'react';`：引入react包，它只包含定义React组件所需的功能，实际开发中通常需要与React渲染器（如react-dom或 react-native）一起使用。
 - `import ReactDOM from 'react-dom/client';`：引入react-dom包内的client模块，用于在浏览器中渲染React组件。
   
   react-dom提供了用于构建web应用的方法。其中`react-dom/client`用于在浏览器中渲染组件；`react-dom/server`用于在服务器端渲染React组件。
 - `import App from './App';`：引入`App.js`中定义的组件。
 -  `const root = ReactDOM.createRoot(document.getElementById('root'));`：为id为root的DOM元素创建一个React根对象，该根对象用来控制DOM节点内React组件的渲染（DOM维护）。一个React应用程序通常只有一个根对象。
-- `root.render(reactNode)`：在根元素中渲染React节点。
-- React.StrictMode是一个React组件，会对其子元素启用一系列检查以帮助开发人员识别一些常见错误，这些检查只在开发过程中执行，不会影响生产环境：
-  - 额外渲染组件一次，以发现在渲染时错误修改状态引起的缺陷
-  - 额外渲染组件一次，以发现因缺少effect清理引起的缺陷
-  - 检查程序中对已废弃API的使用
+- `root.render(<App />)`：在根元素中渲染React节点（本文中的App组件）。
 
-  ```
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  ```
 
 `App.js`最终内容如下：
 
@@ -140,9 +136,12 @@ export default App;
 
 # 参考资料
 
+- [Node.js官网](https://nodejs.org/zh-cn)
+- [npm官网](https://www.npmjs.com/)
+- [VS Code官网](https://code.visualstudio.com/)
 - [Create React App](https://create-react-app.dev/docs/getting-started/) 
+- [npx官网](https://www.npmjs.com/package/npx)
 - [react](https://github.com/facebook/react)
+- [新的JSX转换，不再需要引入React](https://legacy.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html)
 - [react dom](https://react.dev/reference/react-dom)
 - [root.createRoot()](https://react.dev/reference/react-dom/client/createRoot)
-- [StrictMode](https://react.dev/reference/react/StrictMode)
-- [Keeping Components Pure](https://react.dev/learn/keeping-components-pure)
