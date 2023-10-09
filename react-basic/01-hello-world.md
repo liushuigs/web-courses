@@ -28,12 +28,15 @@ React 通常与其他库和工具（如 React Router 用于路由管理，Redux 
 
 > npm(Node Package Manager)是Node.js生态系统中的包管理工具，用于安装、管理和共享JavaScript库和工具。它是一个命令行工具，允许开发者从 npm仓库中下载并安装包，还能够管理项目依赖关系以及执行各种构建脚本和任务。
 
+安装完成后命令行执行以下命令检查是否安装成功：
+
+
 ```bash
 node -v
 npm -v
 ```
 
-如果显示相应的版本号，则说明安装成功。
+如果显示相应的版本号，说明安装成功。
 
 ## VS Code 安装
 
@@ -43,7 +46,7 @@ npm -v
 
 # 使用 Create React App 创建 Hello World
 
-[Create React App（CRA）](https://create-react-app.dev/docs/getting-started/)是一个由Facebook团队开发和维护的命令行工具，用于帮助开发者快速搭建和配置React应用的基础结构。CRA旨在简化React项目的初始化和配置过程，使开发者能够专注于编写组件和功能而不必担心底层的构建工具和配置。
+> [Create React App（CRA）](https://create-react-app.dev/docs/getting-started/)是一个由Facebook团队开发和维护的命令行工具，用于帮助开发者快速搭建和配置React应用的基础结构。CRA旨在简化React项目的初始化和配置过程，使开发者能够专注于编写组件和功能而不必担心底层的构建工具和配置。
 
 使用CRA创建React项目需在终端执行以下命令：
 
